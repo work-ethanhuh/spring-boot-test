@@ -1,0 +1,45 @@
+plugins {
+	id 'java'
+	id 'org.springframework.boot' version '3.3.5'
+	id 'io.spring.dependency-management' version '1.1.6'
+}
+
+group = 'com.springboot'
+version = '0.0.1'
+
+java {
+	toolchain {
+		languageVersion = JavaLanguageVersion.of(17)
+	}
+}
+
+configurations {
+	compileOnly {
+		extendsFrom annotationProcessor
+	}
+}
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	// Web
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+
+	// JDBC
+	implementation 'org.springframework.boot:spring-boot-starter-data-jdbc'
+
+	// JDBC driver
+	runtimeOnly group: 'org.mariadb.jdbc', name: 'mariadb-java-client', version: '3.3.1'
+	runtimeOnly group: 'com.mysql', name: 'mysql-connector-j', version: '8.2.0'
+	
+	// Plugin
+	compileOnly 'org.projectlombok:lombok'
+	annotationProcessor 'org.projectlombok:lombok'
+	annotationProcessor 'org.springframework.boot:spring-boot-configuration-processor'
+}
+
+tasks.named('test') {
+	useJUnitPlatform()
+}

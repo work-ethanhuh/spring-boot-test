@@ -1,0 +1,44 @@
+{
+    "properties": [
+        {
+            "name": "project.version",
+            "type": "java.lang.String",
+            "description": "Server version"
+        },
+        {
+            "name": "project.name",
+            "type": "java.lang.String",
+            "description": "Server full name"
+        },
+        {
+            "name": "db-vendor",
+            "type": "java.lang.String",
+            "description": "mariadb, mysql, postgresql, oracle, etc... for scanning mybatis mapper package"
+        },
+        {
+            "name": "jwt.secretKey",
+            "type": "java.lang.String",
+            "description": "JWT Secret Key"
+        },
+        {
+            "name": "jwt.expirationHours",
+            "type": "java.lang.integer",
+            "description": "JWT Expiration Time in Hour"
+        },
+        {
+            "name": "jwt.issuer",
+            "type": "java.lang.String",
+            "description": "JWT issuer"
+        },
+        {
+            "name": "jwt.refreshSecretKey",
+            "type": "java.lang.String",
+            "description": "JWT Refresh Secret Key"
+        },
+        {
+            "name": "jwt.refreshExpirationHours",
+            "type": "java.lang.integer",
+            "description": "JWT Refresh Expiration Time in Hour"
+        }
+    ]
+}
