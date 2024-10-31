@@ -10,7 +10,7 @@ server:
 spring:
   datasource:
     driver-class-name: org.mariadb.jdbc.Driver
-    url: jdbc:mariadb://localhost:3306/flutter-ethans-base
+    url: jdbc:mariadb://125.133.75.11:3306/flutter-ethans-base
     username: root
     password: gjxoran0!
 ---
