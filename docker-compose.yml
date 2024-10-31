@@ -1,7 +1,7 @@
 version: '3.8'
 
 services:
-  spring-boot-app:
+  spring-boot-test:
     container_name: spring-boot-test
     build:
       context: .
