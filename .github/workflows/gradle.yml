@@ -38,7 +38,7 @@ jobs:
               git remote add origin git@github.com:work-ethanhuh/spring-boot-test.git
             fi
             git pull origin main
-            ./gradlew clean build  # Build the Spring Boot application
+            ./gradlew clean build
             docker-compose down
             docker-compose build --no-cache
             docker-compose up -d
